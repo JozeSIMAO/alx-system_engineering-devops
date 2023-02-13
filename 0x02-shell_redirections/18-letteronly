@@ -1,0 +1,2 @@
+#!/bin/bash
+agrep ^[[:alpha:]] /etc/sshd_config
