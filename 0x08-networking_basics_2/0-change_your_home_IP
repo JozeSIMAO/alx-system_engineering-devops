@@ -4,7 +4,7 @@
 #facebook.com resolves to 8.8.8.8.
 
 cp /etc/hosts ./hosts_cpy
-echo -e "\n\e[31mA COPY OF THE HOSTS FILE HAS BEEN CREATED IN YOUR CURRENT DIR!!\n\e[0im"
-echo "127.0.0.2	localhost" > /etc/hosts
-echo "8.8.8.8	facebook.com" >> /etc/hosts
+echo -e "COPY OF THE HOSTS-F HAS BEEN CREATED IN YOUR CURRENT DIR!!\n"
+echo "127.0.0.2	localhost" > ./hosts_cpy
+echo "8.8.8.8	facebook.com" >> ./hosts_cpy
 cp -f ./hosts_cpy /etc/hosts
