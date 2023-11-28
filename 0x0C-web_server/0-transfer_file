@@ -12,6 +12,6 @@ USERNAME="$3"
 SSH_KEY_PATH="$4"
 
 # Transfer file using scp
-scp -o StrictHostKeyChecking=no -i "$SSH_KEY_PATH" "$FILE_PATH" "$USERNAME@$SERVER_IP":~/
+scp -o StrictHostKeyChecking=no -i "$SSH_KEY_PATH" "$FILE_PATH" "$USERNAME@$SERVER_IP:~/"
 
 exit 0
