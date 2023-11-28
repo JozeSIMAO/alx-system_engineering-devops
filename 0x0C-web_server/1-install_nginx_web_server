@@ -11,7 +11,7 @@ mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
 #  sets the content of the index.html file to "Hello World!" using the echo command.
 echo "Hello World!" > /etc/nginx/html/index.html
-# Sets Nginx to listen on port 80 and serve files from the /etc/nginx/html directory.
+# Sets Nginx to listen on port 80 and serve files from the directory.
 printf %s "server {
      listen      80;
      listen      [::]:80 default_server;
@@ -20,5 +20,5 @@ printf %s "server {
 }
 " > /etc/nginx/sites-available/default
 
-# Restarts the Nginx service to apply the configuration changes.
+# Restarts the Nginx service to commit changes.
 service nginx restart
