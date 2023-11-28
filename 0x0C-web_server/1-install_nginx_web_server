@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 # A bash script that Install nginx web server
+
 # Update the package list
 apt-get update
-
 # Install nginx
 apt-get install -y nginx
-
 # Create nginx html directory
 mkdir -p /etc/nginx/html
-
 # Create an empty index.html file in the nginx directory
 touch /etc/nginx/html/index.html
-
+# content og the index.html file
+echo "Hello World!" > /etc/nginx/htm/index.html
 # Ensure nginx is listening on port 80
 printf "%s\n" "server {
     listen 80;
@@ -19,6 +18,5 @@ printf "%s\n" "server {
     root /etc/nginx/html;
     index index.html index.htm;
 }" > /etc/nginx/sites-available/default
-
 # Restart nginx service to apply new changes
 service nginx restart
