@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Checks for number of paramters
+# Check for the number of parameters
 if [ "$#" -lt 4 ]; then
     echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
     exit 1
@@ -11,6 +11,7 @@ SERVER_IP="$2"
 USERNAME="$3"
 SSH_KEY_PATH="$4"
 
-# transfer file using scp
-scp -o StrictHostKeyChecking=no -i "$SSH_kEY_PATH""$FILE_PATH""$USERNAME@$SERVER_IP":~/
+# Transfer file using scp
+scp -o StrictHostKeyChecking=no -i "$SSH_KEY_PATH" "$FILE_PATH" "$USERNAME@$SERVER_IP":~/
+
 exit 0
