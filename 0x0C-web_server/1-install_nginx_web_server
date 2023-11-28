@@ -14,10 +14,10 @@ touch /etc/nginx/html/index.html
 echo "Hello World!" > /etc/nginx/html/index.html
 # Sets Nginx to listen on port 80 and serve files from the /etc/nginx/html directory.
 printf %s "server {
-     listen      80;
-     listen      [::]:80 default_server;
-     root        /etc/nginx/html;
-     index       index.html index.htm;
+     listen 80;
+     listen [::]:80 default_server;
+     root   /etc/nginx/html;
+     index  index.html index.htm;
 }
 " > /etc/nginx/sites-available/default
 
