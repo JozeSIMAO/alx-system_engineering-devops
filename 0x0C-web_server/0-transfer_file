@@ -6,11 +6,11 @@ if [ "$#" -lt 4 ]; then
     exit 1
 fi
 
-FILE_PATH=$1
-SERVER_IP=$2
-USERNAME=$3
-SSH_KEY_PATH=$4
+FILE_PATH="$1"
+SERVER_IP="$2"
+USERNAME="$3"
+SSH_KEY_PATH="$4"
 
 # transfer file using scp
-scp -o StrictHostKeyChecking=no -i "$SSH_kEY""$FILE_PATH""$USERNAME@$SERVER_IP:~/"
+scp -o StrictHostKeyChecking=no -i "$SSH_kEY""$FILE_PATH""$USERNAME@$SERVER_IP":~/
 exit 0
