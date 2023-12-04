@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on lb-01 server
+
+# Install HAproxy
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+# Configure HAproxy
+sudo sed -i 's/.*listen.*80.*/listen webfarm 0.0.0.0:80\n  mode http\n  balance roundrobin\n  option http-server-close\n  option forwardfor\n  server web-01 247068-web-01:80 check\n  server web-02 247068-web-02:80 check/' /etc/haproxy/haproxy.cfg
+
+# Enable HAproxy as a service
+sudo systemctl enable haproxy
+sudo systemctl restart haproxy
