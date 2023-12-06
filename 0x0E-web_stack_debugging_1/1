@@ -1,0 +1,41 @@
+Get:1 https://brave-browser-apt-release.s3.brave.com stable InRelease [7,546 B]
+Get:2 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://packages.microsoft.com/repos/code stable InRelease [3,589 B]
+Hit:5 http://za.archive.ubuntu.com/ubuntu focal InRelease
+Get:6 https://brave-browser-apt-release.s3.brave.com stable/main amd64 Packages [8,668 B]
+Get:7 http://za.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:8 http://ppa.launchpad.net/zorinos/apps/ubuntu focal InRelease
+Hit:9 http://za.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:10 http://ppa.launchpad.net/zorinos/drivers/ubuntu focal InRelease
+Get:11 http://packages.microsoft.com/repos/code stable/main armhf Packages [16.6 kB]
+Hit:12 https://packages.zorinos.com/stable focal InRelease
+Hit:13 http://ppa.launchpad.net/zorinos/patches/ubuntu focal InRelease
+Get:14 http://packages.microsoft.com/repos/code stable/main arm64 Packages [16.5 kB]
+Hit:15 https://packages.zorinos.com/patches focal InRelease
+Get:16 http://za.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [913 kB]
+Get:17 http://packages.microsoft.com/repos/code stable/main amd64 Packages [16.6 kB]
+Get:18 http://ppa.launchpad.net/zorinos/stable/ubuntu focal InRelease [18.1 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [680 kB]
+Hit:20 https://packages.zorinos.com/apps focal InRelease
+Hit:21 https://packages.zorinos.com/drivers focal InRelease
+Get:22 http://za.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,994 kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,604 kB]
+Get:24 http://za.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [761 kB]
+Get:25 http://za.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,139 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [914 kB]
+Get:27 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [633 kB]
+Fetched 11.0 MB in 20s (553 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-0ubuntu1.4).
+The following packages were automatically installed and are no longer required:
+  libdbusmenu-qt5-2 libminizip1 libopenal-data libopenal1 libqrcodegencpp1
+  librlottie0-1 libsndio7.0 libxcb-record0 libxcb-screensaver0 libxxhash0
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Error: Nginx configuration test failed. Please check your configuration files.
