@@ -5,17 +5,11 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 
-# Verify if Nginx is running
-if ! pgrep -x "nginx" > /dev/null; then
-    # Start Nginx if not running
-    sudo service nginx start
-fi
+# Remove the default Nginx configuration
+sudo rm /etc/nginx/sites-enabled/default
 
-# Check Nginx configuration for errors
-if sudo nginx -t | grep "test is successful"; then
-    # Reload Nginx to apply changes
-    sudo service nginx reload
-    echo "Nginx is now listening on port 80"
-else
-    echo "Error: Nginx configuration test failed. Please check your configuration files."
-fi
+# Create a symbolic link to the default configuration file
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart Nginx to apply the changes
+sudo service nginx restart
