@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script sets up HAproxy for SSL termination
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+sudo certbot certonly --standalone -d www.web01.tech
+
+echo "
+frontend www-https
+    bind *:443 ssl crt /etc/letsencrypt/live/www.web01.tech/fullchain.pem
+    reqadd X-Forwarded-Proto:\ https
+    default_backend www-backend
+
+backend www-backend
+    server web-01 100.27.13.53:80 check
+    server web-02 100.25.37.138:80 check
+" | sudo tee /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
