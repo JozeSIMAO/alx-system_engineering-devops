@@ -1,0 +1,23 @@
+1.DNS Request
+ It resolves the domain to an IP address through a DNS request. The browser checks its cache, and if the IP isn't there, it queries a DNS server for the domain's IP.
+
+2.TCP/IP
+After obtaining the IP, the browser establishes a connection using TCP/IP. This ensures reliable communication between your browser (client) and Google's server. TCP manages data exchange for integrity, while IP routes the data across the network.
+
+3.Firewall
+Data passes through a firewall before reaching the server. It acts as a barrier, inspecting traffic based on security rules to protect against unauthorized access and threats.
+
+4.HTTPS/SSL
+For security, HTTPS encrypts data between the client and server. SSL or TLS provides cryptographic protocols for secure communication in modern web applications.
+
+5.Load-Balancer
+Large-scale applications distribute traffic across multiple servers using a load-balancer. This enhances reliability and availability by preventing server overload.
+
+6.Web Server
+The server handles the request, processing HTTP requests and sending back resources [HTML, CSS, JavaScript]. Google's web server manages various assets.
+
+7.Application Server
+For dynamic web apps, an application server processes business logic, interacts with databases, and generates dynamic content. Google's application server handles search queries and user-specific functionalities.
+
+8.Database
+Web apps often rely on databases. For Google, search results may come from a massive distributed database, providing accurate and relevant information.
