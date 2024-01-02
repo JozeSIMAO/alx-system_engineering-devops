@@ -4,10 +4,10 @@ Gather data from an API
 """
 
 import requests
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-    user_id = argv[1]
+    user_id = sys.argv[1]
     base_url = "https://jsonplaceholder.typicode.com"
     user_response = requests.get(f"{base_url}/users/{user_id}")
     todos_response = requests.get(f"{base_url}/todos?userId={user_id}")
