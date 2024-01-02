@@ -15,8 +15,15 @@ if __name__ == "__main__":
     todo_dict = {}
 
     for user in users_data:
-        user_id = str(user['id'])
-        todo_dict[user_id] = [{"username": user['username'], "task": task['title'], "completed": task['completed']} for task in todos_data if task['userId'] == user['id']]
+        usr_id = str(user['id'])
+        todo_dict[usr_id] = [
+            {
+                "username": user['username'],
+                "task": task['title'],
+                "completed": task['completed']
+            }
+            for task in todos_data if task['userId'] == user['id']
+        ]
 
     with open("todo_all_employees.json", mode='w') as json_file:
         json.dump(todo_dict, json_file)
