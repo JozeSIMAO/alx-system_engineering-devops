@@ -12,7 +12,7 @@ if __name__ == "__main__":
     else:
         employee_id = int(argv[1])
         base_url = "https://jsonplaceholder.typicode.com"
-        
+
         user_response = requests.get(f"{base_url}/users/{employee_id}")
         user_data = user_response.json()
         employee_name = user_data.get("name")
