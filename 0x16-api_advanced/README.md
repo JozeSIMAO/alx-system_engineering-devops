@@ -40,6 +40,6 @@ This project includes Python scripts that interact with the Reddit API to perfor
 
 ## Author
 
-- Joze Simao
+- [Your Name]
 
 Feel free to modify this `README.md` file based on your preferences and additional information you'd like to provide about the project.
